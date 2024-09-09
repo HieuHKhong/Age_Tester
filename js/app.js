@@ -16,7 +16,7 @@ inputDate.addEventListener("click", function verification(){
     const inputDate = document.getElementById("birthdate").value; 
     const birthdate = new Date(inputDate);
     const birthmonth = birthdate.getMonth() + 1;
-    const daybirth = birthdate.getDate() + 1;
+    const daybirth = birthdate.getDate() + 1; // Day keeps displaying -1 than inputed so I put +1
     const birthyear = birthdate.getFullYear();
 
     const birth = birthmonth + "/" + daybirth + "/" + birthyear;
@@ -24,11 +24,8 @@ inputDate.addEventListener("click", function verification(){
     //Compares data to determine if valid
     let secretmessage = document.getElementById("Secret");
 
-    if (year - birthyear >= 18){
-        secretmessage.innerHTML = "You're an Adult!"
-    }else if (year - birthyear < 18){
-        secretmessage.innerHTML = "You're too Young!"
-    }else if (year - birthyear = 18 && month < birthdate){
-        secretmessage.innerHTML = "You're an Adult!"
-    }
-})
+    if(year - birthyear >= 18 && month >= birthmonth && day >= daybirth){
+        secretmessage.innerHTML = "Congrats you are legal!"
+    }else
+        secretmessage.innerHTML = "You're too young!"
+}) 
