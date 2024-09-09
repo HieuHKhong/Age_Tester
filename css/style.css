@@ -1,0 +1,22 @@
+body {
+    text-align: center;
+    font-family: "Kanit", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    background-color: rgb(160, 171, 181);
+}
+
+
+.titleHead h1 {
+    margin: 10% 0% 10% 0%;
+    text-shadow: rgb(239, 239, 239) 2px 2px 1px;
+}
+
+.titleHead h2 {
+    margin: 6% 0% 6% 0%;
+    text-shadow: rgb(239, 239, 239) 2px 2px 1px;
+}
+
+.message p{
+    margin: 6% 0% 6% 0%;
+}
