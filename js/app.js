@@ -24,8 +24,13 @@ inputDate.addEventListener("click", function verification(){
     //Compares data to determine if valid
     let secretmessage = document.getElementById("Secret");
 
-    if(year - birthyear >= 18 && month >= birthmonth && day >= daybirth){
-        secretmessage.innerHTML = "Congrats you are legal!"
+    if (year - birthyear > 18){
+        secretmessage.innerHTML = "You're an Adult!"
+    }else if (year - birthyear === 18 && month >= birthmonth && day >= daybirth){
+        secretmessage.innerHTML = "You're an Adult!"
     }else
-        secretmessage.innerHTML = "You're too young!"
+        secretmessage.innerHTML = "You're too Young!"
+
+        
+        
 }) 
